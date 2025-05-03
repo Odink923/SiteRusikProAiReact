@@ -1,0 +1,24 @@
+/* —–– базові (<768px) —–––––––––––––––––––––––––––––––– */
+.photo {
+  width:  300px;;
+  height: auto;
+}
+
+.logoText {
+  color: white;
+  font-family: 'LT Wave', sans-serif;
+  font-size: 28px;
+  margin-top: 25px;
+}
+
+/* —–– для ≥768px (min-width: 768px) —–––––––––––––––––––––– */
+@media (min-width: 768px) {
+  .photo {
+    width: 37.29vw;    /* 537px → 537/1440*100 ≈ 37.29vw */
+  }
+
+  .logoText {
+    font-size: 3.75vw;   /* 54px → 54/1440*100 = 3.75vw */
+    margin-top: 1.74vw;  /* 25px → 25/1440*100 ≈ 1.74vw */
+  }
+}

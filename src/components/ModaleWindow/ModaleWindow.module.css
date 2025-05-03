@@ -1,0 +1,70 @@
+/* Modal base */
+.modalOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modalContent {
+    background: #0a0f2c; /* близько до фону сайту */
+    padding: 2rem;
+    border: 2px solid #00d1ff;
+    border-radius: 1vw;
+    max-width: 80vw;
+    width: 40rem;
+    box-shadow: 0 0 2vw rgba(0, 209, 255, 0.3);
+    position: relative;
+    font-family: 'Evolventa', sans-serif;
+  }
+  
+  /* Закриття */
+  .closeButton {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+  }
+  
+  /* Заголовок */
+  .modalTitle {
+    margin: 0 0 1rem;
+    font-size: 2.5rem;
+    color: white;
+    font-family: 'LT Wave Mono', sans-serif;
+  }
+  
+  /* Текст */
+  .modalText {
+    font-size: 1.25rem;
+    color: white;
+    line-height: 1.5;
+  }
+  
+  /* Responsive */
+  @media (max-width: 767px) {
+    .modalContent {
+      padding: 1.5rem;
+      width: 90vw;
+      border-radius: 2vw;
+    }
+    .modalTitle {
+      font-size: 1.75rem;
+    }
+    .modalText {
+      font-size: 1rem;
+    }
+    .closeButton {
+      font-size: 1.5rem;
+      top: 0.5rem;
+      right: 0.5rem;
+    }
+  }
+  

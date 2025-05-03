@@ -1,13 +1,33 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* src/index.css */
+@font-face {
+  font-family: 'LT Wave Mono';
+  /* тут ми звертаємося до src/fonts/LTWave-Mono.ttf */
+  src: url('./fonts/LTWave-Mono.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'LT Wave UI';
+  src: url('./fonts/LTWaveUI.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: 'LT Wave';
+  src: url('./fonts/LTWave-Light.otf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
 }
+@font-face {
+  font-family: 'Evolventa';
+  src: url('./fonts/Evolventa-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* далі можна одразу задати глобальний body */

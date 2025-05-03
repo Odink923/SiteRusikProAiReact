@@ -1,0 +1,100 @@
+.flip-container {
+    position: relative;
+    width: calc(500px * 2 + 40px);
+    margin: 2rem auto;
+    overflow: visible;
+  }
+  
+  .flip-book {
+    overflow: visible !important;
+  }
+  
+  /* Контейнер для обраної половини сторінки */
+  .crop {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  /* Малюємо img вдвічі ширшим, щоб зрушити на ліву чи праву половину */
+  .crop img {
+    position: absolute;
+    top: 0;
+    width: 200%;
+    height: auto;
+  }
+  
+  /* Ліва половина: показуємо з 0 до 50% ширини */
+  .crop.left img {
+    left: 0;
+  }
+  
+  /* Права половина: зрушуємо вліво на 50% від ширини img */
+  .crop.right img {
+    left: -100%;
+  }
+  
+  .page {
+    background: #fff;
+    overflow: hidden;
+  }
+  
+  .btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,122,255,0.9);
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    z-index: 10;
+  }
+  .btn.prev { left: -3rem; }
+  .btn.next { right: -3rem; }
+  .btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+  
+  .page-counter {
+    text-align: center;
+    margin-top: 1rem;
+    color: #fff;
+  }
+  @media (max-width: 767px) {
+    .flip-container {
+      transform: scale(0.455);
+      transform-origin: top left;
+    }
+    .btn {
+        font-size: 4.5rem;       /* було 2rem */
+        padding: 0.75rem;        /* було 0.5rem */
+      }
+  }
+
+  @media (max-width: 550px) {
+    .flip-container {
+      transform: scale(0.399);
+      
+      transform-origin: top left;
+    }
+    .btn {
+        font-size: 6.5rem;       /* було 2rem */
+        padding: 0.75rem;        /* було 0.5rem */
+      }
+  }
+
+  @media (max-width: 480px) {
+    .flip-container {
+      transform: scale(0.3);
+      
+      transform-origin: top left;
+    }
+    .btn {
+        font-size: 6.5rem;       /* було 2rem */
+        padding: 0.75rem;        /* було 0.5rem */
+      }
+  }

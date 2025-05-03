@@ -1,0 +1,193 @@
+/* LogoComponent.module.css */
+
+/* —–– базові (нижче md) —–––––––––––––––––––––––––––––––– */
+.component {
+  display: flex;
+  flex-direction: column;
+  margin-top: 275px;
+  align-items: center;
+}
+
+.photo,
+.logotg {
+  width: 253px;
+  height: auto;
+}
+
+.textTitle {
+  font-size: 50px;
+  color: white;
+  font-family: 'LT Wave Mono', sans-serif;
+}
+
+.textUnder {
+  font-size: 20px;
+  color: white;
+  font-family: 'Evolventa', sans-serif;
+}
+.telegram{
+  width: 64px;
+  height: auto;
+}
+.tiktok{
+  width: 53px;
+  height: auto;
+  
+}
+.instagram{
+  width: 58px ;
+  height: auto;
+}
+.facebook{
+  width: 40px;
+  height: auto;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 32px;
+  font-family: 'Evolventa', sans-serif;
+  font-size: 32px;
+  color: white;
+  background-color: transparent;
+  border: 2px solid #00d1ff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+.btn:hover {
+  background-color: rgba(0, 209, 255, 0.1);
+}
+
+.decor {
+  position: absolute;
+  top: 200px;
+  left: -50px;
+  width: 300px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.decorRight {
+  position: absolute;
+  top: 0;
+  right: 14px;
+  width: 300px;
+  pointer-events: none;
+  z-index: 1;
+}
+/*new*/
+
+.infoWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 25px;
+}
+
+.separator {
+  border: none;
+  border-top: 4px solid #00d1ff;
+  margin: 0;
+}
+
+.socialContainer {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  justify-content: space-between;
+  padding: 0 39px;
+}
+
+.socialIcons {
+  display: flex;
+  margin-bottom: 25px;
+  cursor: pointer;
+}
+.socialIcons img + img {
+  margin-left: 22px;
+}
+
+/* —–– для “вище md” (min-width:768px) —–––––––––––––––––– */
+@media (min-width: 768px) {
+  .component {
+    align-items: stretch; 
+    flex-direction: row;
+    margin-top: 19.1vw;            /* 275px → 275/1440*100 ≈ 19.1vw */
+  }
+
+  .photo,
+  .logotg {
+    width: 17.6vw;                 /* 253px → 17.6vw */
+  }
+
+  .textTitle {
+    font-size: 7.08vw;             /* 102px → 7.08vw */
+  }
+
+  .textUnder {
+    font-size: 2.85vw;             /* 41px → 2.85vw */
+  }
+
+  .btn {
+    padding: 0.83vw 2.22vw;        /* 12px → 0.83vw, 32px → 2.22vw */
+    font-size: 2.22vw;             /* 32px → 2.22vw */
+    border-radius: 0.56vw;         /* 8px → 0.56vw */
+  }
+
+  .decor {
+    top: 13.89vw;                  /* 200px → 13.89vw */
+    left: -3.47vw;                 /* -50px → -3.47vw */
+    width: 20.83vw;                /* 300px → 20.83vw */
+  }
+
+  .decorRight {
+    right: 0.97vw;                 /* 14px → 0.97vw */
+    width: 20.83vw;                /* 300px → 20.83vw */
+  }
+
+  /*new*/
+  .infoWrapper {
+    margin-left: 1.74vw;             /* 25px → 1.74vw */
+  }
+
+  .separator {
+    border-top: 0.28vw solid #00d1ff; /* 4px → 0.28vw */
+  }
+
+  .socialContainer {
+    flex-direction: row;
+    margin-top: 1.74vw;              /* 25px → 1.74vw */
+    padding: 0 2.71vw;               /* 39px → 2.71vw */
+  }
+
+  .socialIcons img + img {
+   /* видаляє всі стандартні стилі */
+    cursor: pointer;
+  
+    margin-bottom: 0;
+    margin-left: 1.53vw;             /* 22px → 1.53vw */
+  }
+  .telegram{
+    width: 3.28vw;
+    height: auto;
+  }
+  .tiktok{
+    width: 2.76vw;
+    height: auto;
+    
+  }
+  .instagram{
+    width: 3.02vw;
+    height: auto;
+  }
+  .facebook{
+    width: 2.08vw;
+    height: auto;
+  }
+
+
+
+}

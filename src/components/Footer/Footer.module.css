@@ -1,0 +1,37 @@
+/* —–– базові (<768px) —–––––––––––––––––––––––––––––––– */
+.footer {
+    margin-top: -300px;
+    margin-bottom: 144px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column-reverse;
+  }
+  
+  .icons {
+    display: flex;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+  
+  .icon + .icon {
+    padding-left: 22px;
+  }
+  
+  /* —–– для ≥768px (min-width: 768px) —–––––––––––––––––––––– */
+  @media (min-width: 768px) {
+    .footer {
+      margin-top: 4.31vw;     /* 62px → 62/1440*100 ≈ 4.31vw */
+      margin-bottom: 10vw;    /* 144px → 144/1440*100 = 10vw */
+      flex-direction: row;
+    }
+    .icon + .icon {
+      padding-left: 1.53vw;   /* 22px → 22/1440*100 ≈ 1.53vw */
+    }
+    .icons {
+        display: flex;
+        margin-top: 0px;
+        flex-direction: row;
+      }
+  }
+  

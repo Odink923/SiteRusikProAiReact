@@ -1,0 +1,70 @@
+/* —–– базові (<768px) —–––––––––––––––––––––––––––––––– */
+.card {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin-right: 27px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.photo {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.gradient {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 35%;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0.3) 50%,
+    transparent 100%
+  );
+  z-index: 1;
+}
+
+.caption {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  padding: 0 8px;
+  color: #ffffff;
+  font-family: 'Evolventa', sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  line-height: 1.2;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.8);
+  white-space: nowrap;
+}
+
+/* —–– для ≥768px —–––––––––––––––––––––––––––––––– */
+@media (min-width: 768px) {
+  .card {
+    max-width: 34.72vw;      /* 500px → 34.72vw */
+    margin-right: 1.875vw;   /* 27px → 1.875vw */
+    border-radius: 0.556vw;  /* 8px → 0.556vw */
+  }
+
+  .photo {
+    /* width:100% залишається (%) */
+  }
+
+  .gradient {
+    /* всі % залишаються без змін */
+  }
+
+  .caption {
+    bottom: 0.556vw;                  /* 8px → 0.556vw */
+    padding: 0 0.556vw;               /* 8px → 0.556vw */
+    font-size: 1.111vw;               /* 16px → 1.111vw */
+    text-shadow: 0 0 0.278vw rgba(0, 0, 0, 0.8); /* 4px → 0.278vw */
+  }
+}
