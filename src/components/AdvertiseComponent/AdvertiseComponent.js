@@ -68,7 +68,7 @@ const closeModal2 = () => setIsModalOpen2(false);
 📌 Дата та місце проведення:  <br/>
 3-4 травня 2025 року  <br/>
 Місце проведення:  Нивки-Готельl (м. Київ, вул. Академіка Туполева 16Є)<br/>
-Придбати квитки - https://secure.wayforpay.com/payment/thebestverion
+ <a href='https://secure.wayforpay.com/payment/thebestverion'>Придбати квитки</a> 
 
         </ModaleWindow>
 
