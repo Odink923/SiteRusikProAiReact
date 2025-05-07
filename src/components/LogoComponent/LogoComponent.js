@@ -22,7 +22,7 @@ const LogoComponent = () => {
       <div>
         {/* Інформаційний блок */}
         <div className={styles.infoWrapper}>
-          <div className={styles.textTitle}>Уманський Руслан</div>
+          <div className={styles.textTitle}>Руслан Уманський</div>
           <div className={styles.textUnder}>
             бізнесмен, благодійник та громадський діяч
           </div>
