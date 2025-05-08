@@ -7,7 +7,7 @@ const JournalComponent = () => {
     <div style={{marginTop:"126px"}}>
           <img src="/images/showButton.png" className={styles.photo} alt="Фото з public" 
         />
-        <div className={styles.logoText}>Digital-глянець: World of Real Life: Червень 2025</div>
+        <div className={styles.logoText}>Digital-глянець World of Real Life: Спецвипуск Фестиваль "Крила"</div>
         <FlipMagazine></FlipMagazine>
     </div>
   );
