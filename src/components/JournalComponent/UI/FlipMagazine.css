@@ -1,28 +1,34 @@
+/* ---------- контейнер ---------- */
 .flip-container {
   position: relative;
-  width: calc(500px * 2 + 40px);
   margin: 2rem auto;
   overflow: visible;
+
+  /* замість фіксованої ширини – повна ширина в'юпорту  й центр */
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
+/* сам “фліпбук” */
 .flip-book {
-  overflow: visible !important;
+  overflow: visible !important;   /* щоб не обрізало тінь */
 }
 
-/* Загальні сторінки */
+/* ---------- сторінки ---------- */
 .page {
   background: #fff;
   overflow: hidden;
 }
 
-/* Стилі для обкладинки — вона вся */
+/* обкладинка */
 .cover-page img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-/* Контейнер для половинки */
+/* половинки */
 .crop {
   position: relative;
   width: 100%;
@@ -33,23 +39,19 @@
 .crop img {
   position: absolute;
   top: 0;
-  width: 200%;   /* вдвічі ширше, щоб «зрушити» вліво */
+  width: 200%;          /* подвоюємо ширину, щоб зсунути */
   height: auto;
 }
 
-.crop.left img {
-  left: 0;      /* ліва половина */
-}
+.crop.left  img { left:   0;   } /* ліва половина  */
+.crop.right img { left: -100%; } /* права половина */
 
-.crop.right img {
-  left: -100%;  /* права половина */
-}
-
+/* ---------- кнопки ---------- */
 .btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0,122,255,0.9);
+  background: rgba(0, 122, 255, 0.9);
   border: none;
   color: #fff;
   font-size: 2rem;
@@ -58,16 +60,29 @@
   z-index: 10;
 }
 
-.btn.prev { left: -3rem; }
+.btn.prev { left:  -3rem; }
 .btn.next { right: -3rem; }
+
 .btn:disabled {
   opacity: 0.4;
   cursor: not-allowed;
 }
 
+/* ---------- лічильник ---------- */
 .page-counter {
   text-align: center;
   margin-top: 1rem;
   color: #333;
   font-weight: bold;
+}
+
+/* ---------- мобільні правки ---------- */
+@media (max-width: 767px) {
+  .btn {
+    font-size: 1.5rem;
+    padding: 0.4rem;
+  }
+
+  .btn.prev { left:  -1.5rem; }
+  .btn.next { right: -1.5rem; }
 }

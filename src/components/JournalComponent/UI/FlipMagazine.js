@@ -1,15 +1,15 @@
-// src/components/FlipMagazine.js
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import HTMLFlipBook from 'react-pageflip';
 import './FlipMagazine.css';
 
 export default function FlipMagazine() {
-  const total = 19; // кількість реальних сторінок (включно з обкладинками)
+  /* ====== вихідні дані ====================== */
+  const total = 19;                                 // кількість реальних сторінок
   const full = Array.from({ length: total }, (_, i) =>
-    `/pages/page-${String(i).padStart(2, '0')}.png`
+    `/pages/page-${String(i).padStart(2, '0')}.png`  // <‑‑ виправив лапки на template‑literal
   );
 
-  // будуємо children: обкладинка, половинки внутрішніх, обкладинка
+  /* ====== будуємо children ================== */
   const children = [];
   children.push({ type: 'cover', src: full[0] });
   for (let i = 1; i < total - 1; i++) {
@@ -18,16 +18,38 @@ export default function FlipMagazine() {
   }
   children.push({ type: 'cover', src: full[total - 1] });
 
-  // === Налаштування стартової сторінки ===
-  const P = 4; // <-- бажаний номер оригінальної сторінки (1…total)
+  /* ====== стартова сторінка ================= */
+  const P = 4;                                      // бажана сторінка (1 … total)
   let startPage;
-  if (P === 1) startPage = 0;
+  if (P === 1)       startPage = 0;
   else if (P === total) startPage = children.length - 1;
-  else startPage = 1 + 2 * (P - 2);
+  else               startPage = 1 + 2 * (P - 2);
 
   const book = useRef();
   const [current, setCurrent] = useState(startPage);
 
+  /* ====== адаптивний розмір сторінки ======== */
+  const [pageSize, setPageSize] = useState({ w: 500, h: 700 });
+
+  useEffect(() => {
+    const calcSize = () => {
+      const vw = window.innerWidth;
+      const isMobile = vw < 768;
+
+      /* 1‑сторінковий режим на телефонах – 90 % ширини екрану,
+         але не більше, ніж оригінальні 500 px */
+      const w = isMobile ? Math.min(vw * 0.9, 500) : 500;
+      const h = w * 1.4;      // той самий аспект‑ретейшн 500×700
+
+      setPageSize({ w, h });
+    };
+
+    calcSize();                        // одразу після першого рендеру
+    window.addEventListener('resize', calcSize);
+    return () => window.removeEventListener('resize', calcSize);
+  }, []);
+
+  /* ========================================== */
   return (
     <div className="flip-container">
       <button
@@ -37,6 +59,7 @@ export default function FlipMagazine() {
       >
         ‹
       </button>
+
       <button
         className="btn next"
         onClick={() => book.current.pageFlip().flipNext()}
@@ -47,13 +70,13 @@ export default function FlipMagazine() {
 
       <HTMLFlipBook
         ref={book}
-        width={500}
-        height={700}
-        size="fixed"
-        usePortrait={false}
+        width={pageSize.w}
+        height={pageSize.h}
+        size="stretch"        /* розтягується в межах контейнера */
+        usePortrait={true}    /* на мобілці показує одну сторінку */
         showCover={true}
         drawShadow
-        startPage={startPage}      // <-- тут
+        startPage={startPage}
         onFlip={(e) => setCurrent(e.data)}
         className="flip-book"
       >

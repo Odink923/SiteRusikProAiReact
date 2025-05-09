@@ -4,6 +4,7 @@ body {
   padding: 0;
   min-height: 100vh;   /* щоб зайняло весь екран */
   background: linear-gradient(90deg, #020049, #060d15);
+  
 }
 
 /* Якщо ви використовуєте компонент .App для обгортки: */

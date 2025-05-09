@@ -1,6 +1,6 @@
 /* —–– базові (<768px) —–––––––––––––––––––––––––––––––– */
 .footer {
-    margin-top: -300px;
+   
     margin-bottom: 144px;
     display: flex;
     justify-content: flex-end;
@@ -11,13 +11,15 @@
   .icons {
     display: flex;
     margin-top: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
     cursor: pointer;
   }
-  
-  .icon + .icon {
-    padding-left: 22px;
+  .youtubeIcon{
+    width: 80px;
   }
   
+
   /* —–– для ≥768px (min-width: 768px) —–––––––––––––––––––––– */
   @media (min-width: 768px) {
     .footer {
@@ -32,6 +34,7 @@
         display: flex;
         margin-top: 0px;
         flex-direction: row;
+        gap: 0;
       }
   }
   

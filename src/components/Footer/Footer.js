@@ -28,6 +28,14 @@ const Footer = () => (
         onClick={() => window.open('https://www.facebook.com/share/16QjR7d6ST/', '_blank')} 
         className={styles.icon}
       />
+      <img
+        src="/images/logoYoutube.png"
+        alt="Фейсбук"
+      
+        onClick={() => window.open('https://www.youtube.com/@RusikProAi', '_blank')} 
+        className={`${styles.icon} ${styles.youtubeIcon}`}
+
+      />
     </div>
     <img
       src="/images/FooterRuslan.png"
