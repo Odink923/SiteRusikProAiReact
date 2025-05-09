@@ -42,6 +42,10 @@
   width: 40px;
   height: auto;
 }
+.youtube{
+  width: 60px;
+  height: auto;
+}
 
 .btn {
   display: inline-block;
@@ -103,8 +107,18 @@
 
 .socialIcons {
   display: flex;
+  
   margin-bottom: 25px;
   cursor: pointer;
+}
+@media (max-width: 415px ) {
+  .socialIcons {
+    flex-wrap: wrap;
+    gap: 15px;
+    width: 302px;
+
+   
+  }
 }
 .socialIcons img + img {
   margin-left: 22px;
@@ -185,6 +199,10 @@
   }
   .facebook{
     width: 2.08vw;
+    height: auto;
+  }
+  .youtube{
+    width: 3.125vw;
     height: auto;
   }
 
