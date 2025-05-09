@@ -51,7 +51,7 @@
   display: inline-block;
   padding: 12px 32px;
   font-family: 'Evolventa', sans-serif;
-  font-size: 32px;
+  font-size: 30px;
   color: white;
   background-color: transparent;
   border: 2px solid #00d1ff;
@@ -107,22 +107,20 @@
 
 .socialIcons {
   display: flex;
-  
+  gap: 15px;
   margin-bottom: 25px;
   cursor: pointer;
 }
 @media (max-width: 415px ) {
   .socialIcons {
     flex-wrap: wrap;
-    gap: 15px;
-    width: 302px;
+   
+
 
    
   }
 }
-.socialIcons img + img {
-  margin-left: 22px;
-}
+
 
 /* —–– для “вище md” (min-width:768px) —–––––––––––––––––– */
 @media (min-width: 768px) {

@@ -38,7 +38,7 @@ const LogoComponent = () => {
             <img onClick={() => window.open('https://www.tiktok.com/@rusikproai?_t=ZM-8w1x1EceOZB&_r=1', '_blank')} className={styles.tiktok} src="/images/logoTiktok.png" alt="Тікток" />
             <img onClick={() => window.open('https://www.instagram.com/rusikproai?igsh=MTRvM2UzaHJjOWw2Mg==', '_blank')} className={styles.instagram} src="/images/logoInstagram.png" alt="Інстаграм" />
             <img onClick={() => window.open('https://www.facebook.com/share/16QjR7d6ST/', '_blank')} className={styles.facebook} src="/images/logoFacebook.png" alt="Фейсбук" />
-          <img onClick={() => window.open('https://www.youtube.com/@umka.shop.family', '_blank')} className={styles.youtube}  src="/images/logoYoutube.png" alt="Фейсбук" />
+          <img onClick={() => window.open('https://www.youtube.com/@RusikProAi', '_blank')} className={styles.youtube}  src="/images/logoYoutube.png" alt="Фейсбук" />
           </div>
           <button className={styles.btn} onClick={openModal}>про мене</button>
         </div>
