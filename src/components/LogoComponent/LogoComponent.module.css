@@ -8,10 +8,26 @@
   align-items: center;
 }
 
-.photo,
+
+/*/////////////////////////////////*/
+
+
+.photo {
+  width: 253px;
+  height: auto;
+  border-radius: 10px;
+  position: relative;
+  z-index: 2;
+}
+
+
+
+/*////////////////////////////////////////*/
+
 .logotg {
   width: 253px;
   height: auto;
+border-radius: 10px;
 }
 
 .textTitle {
@@ -94,7 +110,12 @@
   border-top: 4px solid #00d1ff;
   margin: 0;
 }
-
+.logoContainer {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;    /* забороняє перенос */
+  gap: 20px;            /* відстань між фото та текстом */
+}
 .socialContainer {
   margin-top: 25px;
   display: flex;

@@ -1,0 +1,51 @@
+.wrapper {
+  --deg: 0deg;               /* початковий кут */
+  position: relative;
+  display: inline-block;
+  padding: 6px;       
+    width: 253px;       /* “товщина” ефекту */
+  border-radius: 12px;       /* радіус рамки+padding */
+  z-index: 1;
+}
+
+.wrapper::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  right: -6px;
+  bottom: -6px;
+  border-radius: inherit;
+  /* конічний градієнт, кут керується змінною --deg */
+  background: conic-gradient(
+    from var(--deg) at center,
+    #10abe0,
+    #f540ea,
+    #10abe0
+  );
+  filter: blur(10px);
+  z-index: -1;
+}
+
+.photo {
+  display: block;
+  width: 253px;
+  height: auto;
+  border-radius: 10px;
+  position: relative;
+  z-index: 2;
+}
+
+
+@media (min-width: 768px) {
+ 
+
+  .photo {
+    width: 17.6vw;  
+                       /* 253px → 17.6vw */
+  }
+  .wrapper{
+        width: 17.6vw;  
+        height: auto;
+  }
+}

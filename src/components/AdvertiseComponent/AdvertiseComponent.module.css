@@ -81,9 +81,7 @@
     width: 25.42vw;               /* 366px → 25.42vw */
   }
 
-  .gradientOverlay {
-    /* залишається в % */
-  }
+
 
   .caption {
     bottom: 1.11vw;               /* 16px → 1.11vw */

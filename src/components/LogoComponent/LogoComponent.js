@@ -1,6 +1,7 @@
 import React,  { useState } from 'react';
 import styles from './LogoComponent.module.css';
 import ModaleWindow from '../ModaleWindow/ModaleWindow';
+import { Photo } from './UI/Photo';
 
 const LogoComponent = () => {
 
@@ -17,10 +18,12 @@ const LogoComponent = () => {
       <img src="/images/RightLine.png" alt="" className={styles.decorRight} />
 
       {/* Фото */}
-      <img src="/images/ruslan.png" className={styles.photo} alt="Фото" />
-
+   <div className="logoContainer">
+      <Photo></Photo>
+</div>
       <div>
         {/* Інформаційний блок */}
+        
         <div className={styles.infoWrapper}>
           <div className={styles.textTitle}>Руслан Уманський</div>
           <div className={styles.textUnder}>
