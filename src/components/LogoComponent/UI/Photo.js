@@ -28,7 +28,7 @@ export const Photo = () => {
   return (
     <div className={styles.wrapper} ref={wrapperRef}>
       <img
-        src="/images/ruslan.png"
+        src="/images/ruslan.webp"
         className={styles.photo}
         alt="Фото"
       />

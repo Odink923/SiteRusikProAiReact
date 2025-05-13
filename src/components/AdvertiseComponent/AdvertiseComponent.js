@@ -28,19 +28,19 @@ const closeModal2 = () => setIsModalOpen2(false);
 
     <div className={styles.shadowcards}>
     <ShadowCard
-        src="/images/baner1.jpg"
+        src="/images/baner1.webp"
         alt="Руки з кольоровим пігментом"
         caption={'1 червня 2025 р. "Свято дитячих мрій" '}
         onClick={openModal}
       />
          <ShadowCard
-        src="/images/baner2.png"
+        src="/images/baner2.webp"
         alt="Руки з кольоровим пігментом"
         caption={'3-4 травня: Фестиваль "Краща версія себе"  '}
         onClick={openModal1}
       />
          <ShadowCard
-        src="/images/baner3.png"
+        src="/images/baner3.webp"
         alt="Руки з кольоровим пігментом"
         caption="7 червня: Конференція Триєдність Успіху"
         onClick={openModal2}

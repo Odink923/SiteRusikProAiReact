@@ -6,7 +6,7 @@ export default function FlipMagazine() {
   /* ====== вихідні дані ====================== */
   const total = 19;                                 // кількість реальних сторінок
   const full = Array.from({ length: total }, (_, i) =>
-    `/pages/page-${String(i).padStart(2, '0')}.png`  // <‑‑ виправив лапки на template‑literal
+    `/pages/page-${String(i).padStart(2, '0')}.webp`  // <‑‑ виправив лапки на template‑literal
   );
 
   /* ====== будуємо children ================== */
