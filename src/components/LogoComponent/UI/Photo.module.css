@@ -1,11 +1,14 @@
+/* Photo.module.css */
 .wrapper {
-  --deg: 0deg;               /* початковий кут */
   position: relative;
   display: inline-block;
-  padding: 6px;       
-    width: 253px;       /* “товщина” ефекту */
-  border-radius: 12px;       /* радіус рамки+padding */
+  width: 253px;          /* діаметр (разом із padding) */
+  height: 253px;         /* щоб був круг */
+  padding: 6px;          /* “товщина” ефекту */
+  border-radius: 50%;    /* робимо обгортку круглою */
   z-index: 1;
+  /* не сховуємо те, що виходить за межі (.wrapper), щоб бачити розмиття */
+  overflow: visible;
 }
 
 .wrapper::before {
@@ -15,37 +18,46 @@
   left: -6px;
   right: -6px;
   bottom: -6px;
-  border-radius: inherit;
-  /* конічний градієнт, кут керується змінною --deg */
+  border-radius: 50%;   /* коло “під фото” */
   background: conic-gradient(
-    from var(--deg) at center,
     #10abe0,
     #f540ea,
     #10abe0
   );
   filter: blur(10px);
   z-index: -1;
+
+  /* центр обертання в центрі псевдоелемента */
+  transform-origin: center center;
+  /* запускаємо нескінченне обертання */
+  animation: spin 4s linear infinite;
+}
+
+/* Ключові кадри: обертаємо псевдоелемент від 0° до 360° */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .photo {
   display: block;
-  width: 253px;
-  height: auto;
-  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;     /* щоб зображення без спотворень заповнювало коло */
+  border-radius: 50%;    /* робимо саме фото круглим */
   position: relative;
   z-index: 2;
 }
 
-
+/* Медіа-запит для екранів ≥768px */
 @media (min-width: 768px) {
- 
-
-  .photo {
-    width: 17.6vw;  
-                       /* 253px → 17.6vw */
+  .wrapper {
+    width: 17.6vw;       /* раніше було 253px → 17.6vw */
+    height: 17.6vw;      /* щоб зберегти ідеальне коло */
   }
-  .wrapper{
-        width: 17.6vw;  
-        height: auto;
+  .photo {
+    width: 100%;
+    height: 100%;
   }
 }

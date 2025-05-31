@@ -11,15 +11,34 @@
 
 /*/////////////////////////////////*/
 
+.glowWrapper {
+  width: 265px;
+  height: 265px;
+  border-radius: 50%;
+  padding: 6px;
+  background: conic-gradient(#f540ea, #10abe0, #f540ea);
+  animation: rotate 4s linear infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .photo {
   width: 253px;
-  height: auto;
-  border-radius: 10px;
-  position: relative;
-  z-index: 2;
+  height: 253px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: #000;
 }
 
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
 
 /*////////////////////////////////////////*/
