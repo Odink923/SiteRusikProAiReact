@@ -10,7 +10,7 @@
   flex-direction: column;
   margin-top: 12px;
   gap: 16px;              /* проміжки між картками */
-  justify-content: center; /* або center / space-between */
+ /* або center / space-between */
 
 }
 
@@ -86,5 +86,6 @@
   .caption {
     bottom: 1.11vw;               /* 16px → 1.11vw */
     font-size: 1.25vw;            /* 18px → 1.25vw */
+    
   }
 }

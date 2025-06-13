@@ -14,12 +14,13 @@ const LogoComponent = () => {
   return (
     <div className={styles.component}>
       {/* Декор */}
-      <img src="/images/decor-lines.png" alt="" className={styles.decor} />
+  
       <img src="/images/RightLine.png" alt="" className={styles.decorRight} />
 
       {/* Фото */}
    <div className="logoContainer">
       <Photo></Photo>
+      
 </div>
       <div>
         {/* Інформаційний блок */}
@@ -27,7 +28,7 @@ const LogoComponent = () => {
         <div className={styles.infoWrapper}>
           <div className={styles.textTitle}>Руслан Уманський</div>
           <div className={styles.textUnder}>
-            бізнесмен, благодійник та громадський діяч
+            Бізнес, Благодійність, Духовність
           </div>
         </div>
 
@@ -37,9 +38,10 @@ const LogoComponent = () => {
         {/* Соцмережі + кнопка */}
         <div className={styles.socialContainer}>
           <div className={styles.socialIcons}>
-            <img onClick={() => window.open('https://t.me/RusikProAiChannel', '_blank')} className={styles.telegram} src="/images/logoTelegram.png" alt="Телеграм" />
+                        <img onClick={() => window.open('https://www.instagram.com/rusikproai?igsh=MTRvM2UzaHJjOWw2Mg==', '_blank')} className={styles.instagram} src="/images/logoInstagram.png" alt="Інстаграм" />
+ 
             <img onClick={() => window.open('https://www.tiktok.com/@rusikproai?_t=ZM-8w1x1EceOZB&_r=1', '_blank')} className={styles.tiktok} src="/images/logoTiktok.png" alt="Тікток" />
-            <img onClick={() => window.open('https://www.instagram.com/rusikproai?igsh=MTRvM2UzaHJjOWw2Mg==', '_blank')} className={styles.instagram} src="/images/logoInstagram.png" alt="Інстаграм" />
+           <img onClick={() => window.open('https://t.me/RusikProAiChannel', '_blank')} className={styles.telegram} src="/images/logoTelegram.png" alt="Телеграм" />
             <img onClick={() => window.open('https://www.facebook.com/share/16QjR7d6ST/', '_blank')} className={styles.facebook} src="/images/logoFacebook.png" alt="Фейсбук" />
           <img onClick={() => window.open('https://www.youtube.com/@RusikProAi', '_blank')} className={styles.youtube}  src="/images/logoYoutube.png" alt="Фейсбук" />
           </div>

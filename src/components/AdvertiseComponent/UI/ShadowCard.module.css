@@ -48,7 +48,7 @@
 /* —–– для ≥768px —–––––––––––––––––––––––––––––––– */
 @media (min-width: 768px) {
   .card {
-    max-width: 34.72vw;      /* 500px → 34.72vw */
+    max-width: 44.72vw;      /* 500px → 34.72vw */
     margin-right: 1.875vw;   /* 27px → 1.875vw */
     border-radius: 0.556vw;  /* 8px → 0.556vw */
   }
@@ -66,5 +66,6 @@
     padding: 0 0.556vw;               /* 8px → 0.556vw */
     font-size: 1.111vw;               /* 16px → 1.111vw */
     text-shadow: 0 0 0.278vw rgba(0, 0, 0, 0.8); /* 4px → 0.278vw */
+    
   }
 }

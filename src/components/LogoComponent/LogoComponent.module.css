@@ -4,7 +4,7 @@
 .component {
   display: flex;
   flex-direction: column;
-  margin-top: 275px;
+  margin-top: 105px;
   align-items: center;
 }
 
@@ -52,6 +52,7 @@ border-radius: 10px;
 .textTitle {
   font-size: 50px;
   color: white;
+  z-index: 1;
   font-family: 'LT Wave Mono', sans-serif;
 }
 
@@ -167,7 +168,7 @@ border-radius: 10px;
   .component {
     align-items: stretch; 
     flex-direction: row;
-    margin-top: 19.1vw;            /* 275px → 275/1440*100 ≈ 19.1vw */
+    margin-top: 10.1vw;            /* 275px → 275/1440*100 ≈ 19.1vw */
   }
 
   .photo,
@@ -176,7 +177,8 @@ border-radius: 10px;
   }
 
   .textTitle {
-    font-size: 7.08vw;             /* 102px → 7.08vw */
+    font-size: 7.08vw;      
+    z-index: 1;       /* 102px → 7.08vw */
   }
 
   .textUnder {

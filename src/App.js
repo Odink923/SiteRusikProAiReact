@@ -15,6 +15,7 @@ function App() {
  
        <JournalComponent></JournalComponent>
          <Footer></Footer> 
+         
     </div>
   );
 }

@@ -19,7 +19,7 @@ export default function FlipMagazine() {
   children.push({ type: 'cover', src: full[total - 1] });
 
   /* ====== стартова сторінка ================= */
-  const P = 4;                                      // бажана сторінка (1 … total)
+  const P = 1;                                      // бажана сторінка (1 … total)
   let startPage;
   if (P === 1)       startPage = 0;
   else if (P === total) startPage = children.length - 1;
@@ -95,9 +95,7 @@ export default function FlipMagazine() {
         )}
       </HTMLFlipBook>
 
-      <div className="page-counter">
-        {Math.floor(current / 2) + 1} / {total}
-      </div>
+      
     </div>
   );
 }

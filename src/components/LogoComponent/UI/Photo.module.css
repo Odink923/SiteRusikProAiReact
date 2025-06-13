@@ -30,7 +30,7 @@
   /* центр обертання в центрі псевдоелемента */
   transform-origin: center center;
   /* запускаємо нескінченне обертання */
-  animation: spin 4s linear infinite;
+  animation: spin 1s linear infinite;
 }
 
 /* Ключові кадри: обертаємо псевдоелемент від 0° до 360° */

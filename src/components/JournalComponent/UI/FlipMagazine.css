@@ -1,13 +1,18 @@
+html,
+body {
+  overflow-x: hidden;          /* більше ніякого горизонтального скролу */
+}
+
 /* ---------- контейнер ---------- */
 .flip-container {
   position: relative;
   margin: 2rem auto;
-  overflow: visible;
 
   /* замість фіксованої ширини – повна ширина в'юпорту  й центр */
   width: 100%;
   display: flex;
   justify-content: center;
+  overflow: hidden;            /* усе, що «випирає» (тінь, кнопки) — обрізається */
 }
 
 /* сам “фліпбук” */
@@ -60,8 +65,12 @@
   z-index: 10;
 }
 
-.btn.prev { left:  -3rem; }
-.btn.next { right: -3rem; }
+.btn.prev {
+  left: 0;                     /* максимально ліворуч усередині контейнера */
+}   /* стрілка всередині контейнера */
+.btn.next {
+  right: 0;                    /* симетрично до .btn.prev */
+}  /* стрілка всередині контейнера */
 
 .btn:disabled {
   opacity: 0.4;
@@ -83,6 +92,8 @@
     padding: 0.4rem;
   }
 
-  .btn.prev { left:  -1.5rem; }
-  .btn.next { right: -1.5rem; }
+  .btn.prev { left: 0.25rem; }
+  .btn.next { right: 0.25rem; }
 }
+
+/* End of file */

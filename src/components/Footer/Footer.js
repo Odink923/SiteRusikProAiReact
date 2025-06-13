@@ -38,7 +38,7 @@ const Footer = () => (
       />
     </div>
     <img
-      src="/images/FooterRuslan.png"
+      src="/images/FooterRuslan1.png"
       alt=""
       className={styles.ruslan}
     />

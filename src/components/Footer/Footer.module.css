@@ -25,7 +25,7 @@
     .footer {
       margin-top: 4.31vw;     /* 62px → 62/1440*100 ≈ 4.31vw */
       margin-bottom: 10vw;    /* 144px → 144/1440*100 = 10vw */
-      flex-direction: row;
+      flex-direction: column-reverse;
     }
     .icon + .icon {
       padding-left: 1.53vw;   /* 22px → 22/1440*100 ≈ 1.53vw */
