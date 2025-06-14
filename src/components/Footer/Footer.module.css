@@ -7,7 +7,28 @@
     align-items: flex-end;
     flex-direction: column-reverse;
   }
+  .telegram{
+  width: 64px;
+  height: auto;
+}
+.tiktok{
+  width: 53px;
+  height: auto;
   
+}
+.instagram{
+  width: 58px ;
+  height: auto;
+}
+.facebook{
+  width: 40px;
+  height: auto;
+}
+.youtube{
+  width: 60px;
+  height: auto;
+}
+
   .icons {
     display: flex;
     margin-top: 20px;
@@ -34,7 +55,29 @@
         display: flex;
         margin-top: 0px;
         flex-direction: row;
-        gap: 0;
+        gap: 10;
       }
+        .telegram{
+    width: 3.28vw;
+    height: auto;
+  }
+  .tiktok{
+    width: 2.76vw;
+    height: auto;
+    
+  }
+  .instagram{
+    width: 3.02vw;
+    height: auto;
+  }
+  .facebook{
+    width: 2.08vw;
+    height: auto;
+  }
+  .youtube{
+    width: 3.125vw;
+    height: auto;
+  }
+
   }
   

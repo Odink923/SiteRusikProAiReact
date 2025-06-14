@@ -13,6 +13,11 @@
   height: auto;
 
 }
+.divlogobuisnes{
+display:flex;
+ justify-content: center;
+ margin-top: 30px;
+}
 
 .titletext {
   margin-top: 28px;
@@ -51,6 +56,10 @@
   .logobuisnes{
     width: 62.22vw;
   }
+  .divlogobuisnes{
+
+ margin-top: 24px;
+}
   .titletext {
     margin-top: 1.94vw;     /* 28px → 1.94vw */
     font-size: 3.26vw;      /* 47px → 3.26vw */

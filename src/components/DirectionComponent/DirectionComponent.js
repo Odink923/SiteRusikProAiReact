@@ -184,7 +184,7 @@ export default function DirectionComponent() {
         ))}
       </div>
         
-     <div style={{display:'flex', justifyContent:'center', marginTop:'24  px'}}><img
+     <div className={styles.divlogobuisnes}><img
   src="/images/logoDirections/BuisnesUmka.webp"
   alt="Логотип бізнес-напряму Umka"
   className={styles.logobuisnes}
